@@ -42,6 +42,7 @@ PRODUCT_PACKAGES += \
     init.fingerprint.rc \
     init.nfc.samsung.rc \
     init.qcom.rc \
+    init.qcom.recovery.rc \
     init.qti.kernel.rc \
     init.qti.media.rc \
     init.ramplus.rc \
@@ -357,10 +358,6 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libsqlite.vendor
-
-# Recovery
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc
 
 # RIL
 PRODUCT_PACKAGES += \
