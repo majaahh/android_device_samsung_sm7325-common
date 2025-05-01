@@ -14,22 +14,29 @@
 # limitations under the License.
 #
 
+# All components inherited here go to system image
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_system.mk)
+
+# All components inherited here go to system_ext image
+$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
+
+# All components inherited here go to product image
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
+
+# All components inherited here go to vendor image
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
 # Add common definitions for Qualcomm
 $(call soong_config_set,rfs,mpss_firmware_symlink_target,firmware_modem)
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
-# Inherit from the 64 bit configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-
-# Inherit from the common Open Source product configuration
-TARGET_SUPPORTS_OMX_SERVICE := false
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-
 # Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
-# Inherit Dalvik configuration
-$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Inherit proprietary blobs
 $(call inherit-product, vendor/samsung/sm7325-common/sm7325-common-vendor.mk)
@@ -225,11 +232,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_profiles_yupik_iot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_yupik_iot.xml
 
 # NFC
-PRODUCT_PACKAGES += \
-    libnfc-nci \
-    libnfc_nci_jni \
-    Tag
-
 ifeq ($(TARGET_HAVE_SEC_NFC),true)
 PRODUCT_PACKAGES += android.hardware.nfc-service.sec
 
