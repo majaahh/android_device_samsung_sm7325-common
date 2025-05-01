@@ -3,16 +3,28 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# All components inherited here go to system image
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_system.mk)
+
+# All components inherited here go to system_ext image
+$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
+
+# All components inherited here go to product image
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
+
+# All components inherited here go to vendor image
+$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
 # All components inherited here go to vendor image
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Add common definitions for Qualcomm
 $(call soong_config_set,rfs,mpss_firmware_symlink_target,firmware_modem)
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
-
-# Inherit common makefiles
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 # Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
@@ -216,9 +228,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
-# Media
-TARGET_SUPPORTS_OMX_SERVICE := false
-
 # Media - Configuration
 PRODUCT_PACKAGES += \
     media_codecs_lahaina_vendor.xml \
@@ -242,10 +251,7 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    libnfc-nci \
-    libnfc-nci.conf \
-    libnfc_nci_jni \
-    Tag
+    libnfc-nci.conf
 
 ifeq ($(TARGET_HAVE_SEC_NFC),true)
 PRODUCT_PACKAGES += \
