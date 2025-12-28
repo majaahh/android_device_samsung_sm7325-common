@@ -1,4 +1,4 @@
-# All blobs are from A736BXXUAEXK4 (U), unless pinned
+# All blobs are from A736BXXSAGYJ3 (B), unless pinned
 
 # ACDB
 vendor/lib/libacdb-fts.so
@@ -623,7 +623,7 @@ vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
 vendor/etc/locale/plmn_delta_eng.bin
 vendor/etc/plmn_delta_hktw.bin
-vendor/etc/plmn_se13.bin
+vendor/etc/plmn_se13_prebuilt.bin
 vendor/etc/mtu-conf.xml
 vendor/lib/libconfigdb.so
 vendor/lib64/libconfigdb.so
@@ -634,8 +634,8 @@ vendor/lib64/libsec-ril.so|432c63636ba7beb9f713178bb587cc1db5343880
 vendor/lib/libsecril-client.so
 vendor/lib64/libsecril-client.so
 vendor/lib64/libril_sem.so
-vendor/lib64/libSemTelephonyProps.so
-vendor/lib64/libSemDataProps.so
+vendor/lib64/libVendorSemTelephonyProps.so
+vendor/lib64/libVendorSemDataProps.so
 vendor/etc/init/dataadpl.rc
 vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/vendor.qti.tftp.rc
