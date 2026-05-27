@@ -232,6 +232,7 @@ PRODUCT_PACKAGES += \
     FrameworkResOverlayCommon \
     SettingsOverlayCommon \
     SystemUIOverlayCommon \
+    TelephonyOverlayCommon \
     WiFiOverlayCommon
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
@@ -275,6 +276,7 @@ PRODUCT_PACKAGES += \
     android.hardware.sensor.stepcounter.prebuilt.xml \
     android.hardware.sensor.stepdetector.prebuilt.xml \
     android.hardware.telephony.gsm.prebuilt.xml \
+    android.hardware.telephony.ims.prebuilt.xml \
     android.hardware.usb.accessory.prebuilt.xml \
     android.hardware.usb.host.prebuilt.xml \
     android.hardware.vulkan.compute-0.prebuilt.xml \
@@ -310,6 +312,15 @@ PRODUCT_PACKAGES += \
     libsec-ril \
     secril_config_svc \
     sehradiomanager
+
+# RIL - IMS
+PRODUCT_PACKAGES += \
+    CarrierSettings \
+    ImsStack \
+    Iwlan \
+    QualifiedNetworksService
+
+$(call inherit-product, packages/modules/ImsMedia/imsmedia.mk)
 
 # Sensors
 PRODUCT_PACKAGES += android.hardware.sensors-service.samsung-multihal
