@@ -145,6 +145,15 @@ $(call soong_config_set,lineage_health,fast_charge_value_none,1)
 $(call soong_config_set,lineage_health,fast_charge_value_fast_charge,0)
 $(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
 
+# IMS
+PRODUCT_PACKAGES += \
+    CarrierSettings \
+    ImsStack \
+    Iwlan \
+    QualifiedNetworksService
+
+$(call inherit-product, packages/modules/ImsMedia/imsmedia.mk)
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.ramplus \
@@ -236,6 +245,7 @@ PRODUCT_PACKAGES += \
     LineageSettingsProviderOverlayCommon \
     SettingsOverlayCommon \
     SystemUIOverlayCommon \
+    TelephonyOverlayCommon \
     WiFiOverlayCommon
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
@@ -279,6 +289,7 @@ PRODUCT_PACKAGES += \
     android.hardware.sensor.stepcounter.prebuilt.xml \
     android.hardware.sensor.stepdetector.prebuilt.xml \
     android.hardware.telephony.gsm.prebuilt.xml \
+    android.hardware.telephony.ims.prebuilt.xml \
     android.hardware.usb.accessory.prebuilt.xml \
     android.hardware.usb.host.prebuilt.xml \
     android.hardware.vulkan.compute-0.prebuilt.xml \

@@ -149,6 +149,9 @@ include device/qcom/sepolicy_vndr/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 PRODUCT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
+    $(COMMON_PATH)/sepolicy/system_ext/private \
+    packages/modules/ImsMedia/sepolicy/system_ext/private # !TEMP!
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
