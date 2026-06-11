@@ -147,8 +147,7 @@ PRODUCT_PACKAGES += \
     init.qti.display_boot.rc \
     init.qti.display_boot.sh \
     gralloc.default \
-    vendor.qti.hardware.memtrack-service \
-    AdvancedDisplay
+    vendor.qti.hardware.memtrack-service
 
 # Doze
 PRODUCT_PACKAGES += \
