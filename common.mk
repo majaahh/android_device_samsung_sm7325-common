@@ -149,10 +149,6 @@ PRODUCT_PACKAGES += \
     gralloc.default \
     vendor.qti.hardware.memtrack-service
 
-# Doze
-PRODUCT_PACKAGES += \
-    SamsungDoze
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
