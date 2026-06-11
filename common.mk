@@ -177,10 +177,6 @@ $(call soong_config_set,lineage_health,fast_charge_value_fast_charge,0)
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.samsung
 
-# FlipFlap
-PRODUCT_PACKAGES += \
-    FlipFlap
-
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
