@@ -243,6 +243,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
 # Permissions
+PRODUCT_PACKAGES += \
+    android.hardware.telephony.ims.prebuilt.xml \
+    privapp-permissions-me.phh.ims.xml
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
@@ -297,6 +301,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     secril_config_svc \
     sehradiomanager
+
+# RIL - IMS
+PRODUCT_PACKAGES += \
+    Iwlan \
+    PhhIms \
+    QualifiedNetworksService
 
 # Sensors
 PRODUCT_PACKAGES += \

@@ -203,6 +203,11 @@ ro.telephony.default_cdma_sub=0
 ro.telephony.default_network=26,26
 ro.radio.noril=no
 
+# RIL - IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+persist.dbg.allow_ims_off=1
+
 # USB
 vendor.usb.diag.func.name=ffs
 vendor.usb.use_ffs_mtp=1
