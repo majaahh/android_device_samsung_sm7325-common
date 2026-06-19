@@ -10,6 +10,12 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "fstab.qcom",
+    src: "fstab.qcom",
+    soc_specific: true,
+}
+
+prebuilt_etc {
     name: "init.audio.samsung.rc",
     src: "init.audio.samsung.rc",
     sub_dir: "init",

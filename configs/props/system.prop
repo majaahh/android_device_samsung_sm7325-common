@@ -1,0 +1,2 @@
+# Keystore
+ro.security.keystore.keytype=sakv2,gak
