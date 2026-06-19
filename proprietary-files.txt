@@ -262,8 +262,8 @@ vendor/lib/liboemcrypto.so
 vendor/lib64/liboemcrypto.so
 vendor/lib/libtrustedapploader.so
 vendor/lib64/libtrustedapploader.so
-vendor/lib/libwvhidl.so|36990dbac5c87ccb351071a2758b0786b532f0f1
-vendor/lib/mediadrm/libwvdrmengine.so|78b645e57df4c57c9406619afd345916f7705f27
+vendor/lib/libwvhidl.so
+vendor/lib/mediadrm/libwvdrmengine.so
 
 # Feature
 vendor/lib/libsemnativecarrierfeature.so
@@ -274,7 +274,7 @@ vendor/lib/libsecnativefeature.so
 vendor/lib64/libsecnativefeature.so
 
 # Gatekeeper
-vendor/lib64/hw/gatekeeper.mdfpp.so|7b185aca7ae62e2b7104d36740587a351cc4867e
+vendor/lib64/hw/gatekeeper.mdfpp.so
 
 # GPS
 vendor/app/CACertService/CACertService.apk
@@ -494,7 +494,7 @@ vendor/etc/init/ipa_fws.rc
 
 # Keymaster
 vendor/lib64/libkeymaster_helper.so
-vendor/lib64/libskeymaster4device.so|de98a294927f45b84e41b88a2145c7771377715c
+vendor/lib64/libskeymaster4device.so
 
 # Machine learning
 vendor/lib64/libreffeature.so
