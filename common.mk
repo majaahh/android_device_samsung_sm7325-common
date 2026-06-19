@@ -217,7 +217,20 @@ endif
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+PRODUCT_PACKAGES += \
+    ApertureOverlayCommon \
+    CarrierConfigOverlayCommon \
+    FlipFlapOverlayCommon \
+    FrameworkResOverlayCommon \
+    Launcher3QuickstepOverlayCommon \
+    LineagePartsOverlayCommon \
+    LineageSDKOverlayCommon \
+    LineageSettingsProviderOverlayCommon \
+    SettingsLibOverlayCommon \
+    SettingsOverlayCommon \
+    SystemUIOverlayCommon \
+    TelephonyOverlayCommon \
+    WiFiOverlayCommon
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -343,8 +356,7 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     wpa_cli \
     wpa_supplicant \
-    wpa_supplicant.conf \
-    WifiOverlay
+    wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/icm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/icm.conf \
