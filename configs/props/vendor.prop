@@ -92,6 +92,7 @@ ro.crypto.volume.metadata.method=dm-default-key
 dalvik.vm.lockprof.threshold=500
 
 # Display
+debug.renderengine.backend=skiavkthreaded
 debug.sf.auto_latch_unsignaled=0
 debug.sf.disable_backpressure=1
 debug.sf.enable_advanced_sf_phase_offset=1
