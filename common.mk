@@ -24,8 +24,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call soong_config_set,rfs,mpss_firmware_symlink_target,firmware_modem)
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Pixel stuff
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
 # Inherit proprietary blobs
 $(call inherit-product, vendor/samsung/sm7325-common/sm7325-common-vendor.mk)
@@ -92,20 +92,11 @@ PRODUCT_PACKAGES += \
     init.qti.display_boot.rc \
     init.qti.display_boot.sh
 
-# Display - mDNIe
-PRODUCT_PACKAGES += AdvancedDisplay
-
-# Display - Led Cover
-PRODUCT_PACKAGES += FlipFlap
-
 # Display - Lineage - Live
 PRODUCT_PACKAGES += vendor.lineage.livedisplay-service.samsung-qcom
 
 # Display - Lineage - Touch
 PRODUCT_PACKAGES += vendor.lineage.touch-service.samsung
-
-# Doze
-PRODUCT_PACKAGES += SamsungDoze
 
 # DRM - Clearkey
 PRODUCT_PACKAGES += com.android.hardware.drm.clearkey
@@ -231,12 +222,7 @@ PRODUCT_PACKAGES += libnfc-nci.conf
 # Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlayCommon \
-    FlipFlapOverlayCommon \
     FrameworkResOverlayCommon \
-    Launcher3QuickstepOverlayCommon \
-    LineagePartsOverlayCommon \
-    LineageSDKOverlayCommon \
-    LineageSettingsProviderOverlayCommon \
     SettingsOverlayCommon \
     SystemUIOverlayCommon \
     WiFiOverlayCommon
