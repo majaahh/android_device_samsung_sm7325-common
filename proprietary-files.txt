@@ -172,7 +172,6 @@ vendor/lib64/com.qti.stats.common.so
 vendor/lib64/libopencv.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libbitmlenginev2.so
-# Need com.qti.feature2.generic and com.qti.chi.override from device-specific trees
 vendor/lib64/com.qti.chiusecaseselector.so;DISABLE_DEPS
 vendor/lib64/libcamerapostproc.so;DISABLE_DEPS
 vendor/lib64/libcamxexternalformatutils.so
@@ -435,10 +434,8 @@ vendor/etc/display/DPU7__.xml
 vendor/etc/display/DPU660.xml
 vendor/etc/display/DPU670.xml
 vendor/etc/display/DPU720.xml
-# Vulkan
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
-# Adreno
 vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
 vendor/lib/egl/libq3dtools_esx.so
