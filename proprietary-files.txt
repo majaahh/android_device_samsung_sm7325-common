@@ -251,9 +251,6 @@ vendor/lib/libcvp2_1.so
 vendor/lib64/libcvp2_1.so
 
 # DRM
-vendor/bin/hw/android.hardware.drm@1.3-service.widevine
-vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 vendor/lib/libcpion.so
 vendor/lib64/libcpion.so
 vendor/lib/libminksocket.so
@@ -262,8 +259,15 @@ vendor/lib/liboemcrypto.so
 vendor/lib64/liboemcrypto.so
 vendor/lib/libtrustedapploader.so
 vendor/lib64/libtrustedapploader.so
-vendor/lib/libwvhidl.so|d69cee919bc507a6d0ea743e138c19291396ab45|22008c46f4edb2c1ec75fa01dd28a85fceb5d2f4
-vendor/lib/mediadrm/libwvdrmengine.so|ab690db4ff629c3692285e5ef4db66cf18121d38|c27725af95ee2bf85704a45deded180fb4f20e08
+
+# DRM - from r0q - S901EXXSEGZE3
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine|51c72c9dfe43eb9760a7bcebb5d60deeb3132750
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
+vendor/lib/libwvhidl.so|9a12b88f7bf3a83f64fe187507f1ed96c97a362b|6454dd99c3de6a58647aa88f89b64ea3abf9a2db
+vendor/lib/mediadrm/libwvdrmengine.so|efa3554cbdf57233432ef6390527db0f0f4e4c42|0ef2b41434f1a9ec36ab3126f5a1d9308a0edf82
+vendor/lib64/libwvhidl.so|da054c8aecda51ee477834298dfcb469dcd6ecc7|b932ab5dc6b8bf3004d9827e3a3656bc5f389198
+vendor/lib64/mediadrm/libwvdrmengine.so|f4c2da79577feed245dda0e73a3c1cedc62f75f9|83a9228c5b72ec0087933a6907011cd750c6fb37
 
 # Feature
 vendor/lib/libsemnativecarrierfeature.so
