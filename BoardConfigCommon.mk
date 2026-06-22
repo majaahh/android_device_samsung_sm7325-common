@@ -120,7 +120,7 @@ BOARD_VENDORIMAGE_EXTFS_INODE_COUNT := -1
 TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_PRODUCT := product
-TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/partitions/config.fs
 
 # Partitions - Dynamic
 BOARD_SUPER_PARTITION_GROUPS := samsung_dynamic_partitions
