@@ -158,9 +158,9 @@ BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 400000000
 TARGET_USES_ION := true
 
 # Properties
-TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
-TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
-TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
+TARGET_SYSTEM_PROP += $(COMMON_PATH)/configs/props/system.prop
+TARGET_VENDOR_PROP += $(COMMON_PATH)/configs/props/vendor.prop
+TARGET_ODM_PROP += $(COMMON_PATH)/configs/props/odm.prop
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
