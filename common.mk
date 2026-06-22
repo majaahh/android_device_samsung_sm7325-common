@@ -119,8 +119,8 @@ PRODUCT_PACKAGES += vendor.lineage.touch-service.samsung
 # Doze
 PRODUCT_PACKAGES += SamsungDoze
 
-# DRM
-PRODUCT_PACKAGES += android.hardware.drm-service.clearkey
+# DRM - Clearkey
+PRODUCT_PACKAGES += com.android.hardware.drm.clearkey
 
 # Fastboot
 PRODUCT_PACKAGES += fastbootd
