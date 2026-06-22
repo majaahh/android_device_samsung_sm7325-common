@@ -1,4 +1,4 @@
-# All blobs are from A736BXXSAGYJ3 (B), unless pinned
+# All blobs are from A736BXXSBGZB2 (B), unless pinned
 
 # ACDB
 vendor/lib/libacdb-fts.so
@@ -612,52 +612,51 @@ vendor/etc/sec_config
 # QTI
 vendor/etc/init/init.qti.qcv.rc
 
-# RIL
-vendor/bin/hw/rild
-vendor/bin/adpl
-vendor/bin/ipacm-diag
-vendor/bin/tftp_server
-vendor/bin/rmt_storage
-vendor/etc/init/netmgrd.rc
-vendor/etc/data/dsi_config.xml
-vendor/etc/data/netmgr_config.xml
-vendor/etc/locale/plmn_delta_eng.bin
-vendor/etc/plmn_delta_hktw.bin
-vendor/etc/plmn_se13_prebuilt.bin
-vendor/etc/mtu-conf.xml
-vendor/lib/libconfigdb.so
-vendor/lib64/libconfigdb.so
-vendor/lib/libqcmaputils.so
-vendor/lib64/libqcmaputils.so
-vendor/lib64/libengmode_client.so
-vendor/lib64/libsec-ril.so|432c63636ba7beb9f713178bb587cc1db5343880
-vendor/lib/libsecril-client.so
-vendor/lib64/libsecril-client.so
-vendor/lib64/libril_sem.so
-vendor/lib64/libVendorSemTelephonyProps.so
-vendor/lib64/libVendorSemDataProps.so
-vendor/etc/init/dataadpl.rc
-vendor/etc/init/ipacm-diag.rc
-vendor/etc/init/vendor.qti.tftp.rc
-vendor/etc/init/vendor.qti.rmt_storage.rc
-vendor/etc/plmn_delta_usagsm.bin
-vendor/etc/plmn_delta.bin
-vendor/etc/locale/plmn_delta_zh-rCN.bin
-vendor/etc/locale/plmn_delta_zh-rTW.bin
-vendor/etc/locale/plmn_delta_zh-rHK.bin
-vendor/etc/plmn_delta_attaio.bin
-vendor/etc/sec_config_oem
-vendor/etc/pdpcnt-conf.xml
-vendor/lib/libqrtr.so
-vendor/lib64/libqrtr.so
-vendor/lib/libsystem_health_mon.so
-vendor/lib64/libsystem_health_mon.so
-vendor/lib64/libvkmanager_vendor.so
-vendor/lib/libxml.so
-vendor/lib64/libxml.so
-vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
-vendor/lib64/vendor.samsung.hardware.radio.bridge@2.1.so
-vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
+# RIL - from a73xq - A736BXXUAEXK4
+vendor/bin/hw/rild|31e9ef507f6c096de479b6ac34759e5b2cac2c59
+vendor/bin/adpl|de92b32c1c5fa765dd2d94996c7445ee6826411d
+vendor/bin/ipacm-diag|d927184b1ac03b4f0f81ab928bcd8de838dee027
+vendor/bin/tftp_server|60c781fe00d1bb4adc66f5224579d413dd953490
+vendor/bin/rmt_storage|02febe90f49fa82fb000cbdead0232aa4a6db3a4
+vendor/etc/init/netmgrd.rc|925f3cc00ede9a635d9af72120236ff4cdf22863
+vendor/etc/data/dsi_config.xml|85f76668d6b6f87402c534f284c286676edefa93
+vendor/etc/data/netmgr_config.xml|4bd293b19cd5f41cba75f4638672bb460139ce22
+vendor/etc/locale/plmn_delta_eng.bin|37e2c6b92722a8a266885cc590fe60228446bc95
+vendor/etc/plmn_delta_hktw.bin|674eccfe8031a4a0c5a3edaaa48bf2004cecc7a3
+vendor/etc/mtu-conf.xml|b73c14f7fdfa013163a2635b328e3542c99be1c2
+vendor/lib/libconfigdb.so|453ce93b47cf23c78f1334f69a51fa014e440434
+vendor/lib64/libconfigdb.so|7192c636b97e1f374171639505c677d7796595b4
+vendor/lib/libqcmaputils.so|af8c9f723046b7d46e3313a121102064a5906261
+vendor/lib64/libqcmaputils.so|68031f45d99278a8d2e80e8ba533fb2d1541b329
+vendor/lib64/libengmode_client.so|c2995170333a82e5b0ab99e191c66ab63f11bf51
+vendor/lib64/libsec-ril.so|fafb8e7f509e717d5e2327d96e1a61f19ceb5540|432c63636ba7beb9f713178bb587cc1db5343880
+vendor/lib/libsecril-client.so|90d5ab601c7fdf492334664cb0f210075f8db3c7
+vendor/lib64/libsecril-client.so|a83d66a3827be522113ff64944288db72c559546
+vendor/lib64/libril_sem.so|5cc275d50714f9d12a134e28a617a223d4519629
+vendor/lib64/libSemDataProps.so|df4546ca85d1afa896e95820f3faccf1668edea1
+vendor/lib64/libSemTelephonyProps.so|c83c5af2a7a71cfe190a96025174af345f7ca377
+vendor/etc/init/dataadpl.rc|cd4907d9bfd438fe5f5c86f5d6cec590ac0bac2a
+vendor/etc/init/ipacm-diag.rc|e3cee56d2e3ca6bf9aafb827827ebea369fc2897
+vendor/etc/init/vendor.qti.tftp.rc|b27f188cbffba470a4510d50e46ff7c8446c22cb
+vendor/etc/init/vendor.qti.rmt_storage.rc|bc212c6353c2ded44ae4d759605fbbe55aa4fa3f
+vendor/etc/plmn_delta_usagsm.bin|9a25ec9e9da16ed2f8a9db07f037fe08283b24e5
+vendor/etc/plmn_delta.bin|dbcc4d73dca31bd132b042e36be988701c42a552
+vendor/etc/locale/plmn_delta_zh-rCN.bin|65f7993d6fb50278ffaf3352a585650363564de8
+vendor/etc/locale/plmn_delta_zh-rTW.bin|9fd887a3bcff5cfd3cb5328be3cc0f5abb7008f2
+vendor/etc/locale/plmn_delta_zh-rHK.bin|1ea425272673ab1b9a62cd20ad54408d9aadfc84
+vendor/etc/plmn_delta_attaio.bin|751a1c7105f1c03fc196689c2a71e2c69aa14e1f
+vendor/etc/sec_config_oem|ed616344eca8336a6e8d0986e54e686af6225488
+vendor/etc/pdpcnt-conf.xml|914a3ec45c2f82cca4355b4736e617e1ee644fbe
+vendor/lib/libqrtr.so|64d5af4b5628526f1d3bee6f7ffcae60615a798a
+vendor/lib64/libqrtr.so|8b99ffbfd5bfebce026f36146e08c0f3f93fae00
+vendor/lib/libsystem_health_mon.so|793bec0ed32fd2999ff63f847403e38a2c43f278
+vendor/lib64/libsystem_health_mon.so|347b862fc68a7c28d96c81151ca7b0d09f06bad9
+vendor/lib64/libvkmanager_vendor.so|a60e7ae6d26f51ad7ed198652371768806264cf9
+vendor/lib/libxml.so|b93bf18c823c08d80c48b1b86547b526940d84a1
+vendor/lib64/libxml.so|3784f1af188bffee31f386e56a8f14e26acea7f4
+vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so|bda592a1a8b77dcdfd492bbdff2b07e5aa45ad51
+vendor/lib64/vendor.samsung.hardware.radio.bridge@2.1.so|3abbd927525d2bcf95e3f2bec40393bfe1abe367
+vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so|817d49240ffc9ab61e8627be08afda04ca6e04a0
 
 # Sensors
 vendor/bin/factory.ssc
