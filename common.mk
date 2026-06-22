@@ -200,6 +200,7 @@ $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/s
 
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := false
+PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
 # Media - Configuration
 PRODUCT_PACKAGES += \
