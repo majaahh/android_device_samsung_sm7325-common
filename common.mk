@@ -144,6 +144,7 @@ $(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,fal
 # Init
 PRODUCT_PACKAGES += \
     fstab.ramplus \
+    fstab.qcom \
     init.audio.samsung.rc \
     init.fingerprint.rc \
     init.nfc.samsung.rc \
@@ -165,9 +166,7 @@ PRODUCT_PACKAGES += \
     wifi_qcom_wcn6750.rc \
     wifi_sec.rc
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
-    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
 # Init - Scripts
 PRODUCT_PACKAGES += \
