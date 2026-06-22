@@ -77,6 +77,9 @@ vendor/lib/spatializer-aidl-V1-cpp.so
 vendor/lib/vendor.qti.hardware.audiohalext@1.0.so
 vendor/lib64/libaudioconfigstore.so
 
+# Audio - Dolby
+vendor/etc/dolby/dax-default.xml
+
 # Soundtrigger
 vendor/lib/hw/sound_trigger.primary.lahaina.so
 vendor/lib/libaudio_soundtrigger.so
