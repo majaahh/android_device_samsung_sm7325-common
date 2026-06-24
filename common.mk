@@ -55,15 +55,18 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor:32 \
     libvolumelistener
 
+# Audio - Configuration
+PRODUCT_PACKAGES += \
+    audio_effects.xml \
+    audio_io_policy.conf \
+    audio_platform_info.xml \
+    audio_platform_info_intcodec.xml \
+    audio_policy_configuration.xml \
+    mixer_usb_default.xml \
+    sound_trigger_mixer_paths.xml \
+    sound_trigger_platform_info.xml
+
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/configs/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    $(LOCAL_PATH)/audio/configs/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf\
-    $(LOCAL_PATH)/audio/configs/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
-    $(LOCAL_PATH)/audio/configs/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
-    $(LOCAL_PATH)/audio/configs/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/configs/mixer_usb_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_usb_default.xml \
-    $(LOCAL_PATH)/audio/configs/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
-    $(LOCAL_PATH)/audio/configs/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration_7_0.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
@@ -76,8 +79,7 @@ PRODUCT_PACKAGES += SamsungDAP
 TARGET_EXCLUDES_AUDIOFX := true
 
 # Audio - Sound Trigger - Permissions
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
+PRODUCT_PACKAGES += privapp-permissions-hotword.xml
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -201,7 +203,7 @@ PRODUCT_PACKAGES += \
     init.qti.qcv.sh
 
 # Keylayout
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/keylayout/sec_touchscreen.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/sec_touchscreen.kl
+PRODUCT_PACKAGES += sec_touchscreen.kl
 
 # Keymaster
 PRODUCT_PACKAGES += android.hardware.keymaster@4.0-service.samsung
@@ -212,25 +214,26 @@ $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/s
 PRODUCT_ENABLE_UFFD_GC := false
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media/media_codecs_performance_yupik_v0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_yupik_v0.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_performance_yupik_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_yupik_v1.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_yupik_v0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_yupik_v0.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_lahaina.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_lahaina.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_lahaina_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_lahaina_vendor.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_performance_lahaina.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_lahaina.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_performance_lahaina_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_lahaina_vendor.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_performance_yupik_iot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_yupik_iot.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_yupik_iot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_yupik_iot.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_yupik_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_yupik_v1.xml \
-    $(LOCAL_PATH)/configs/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
-    $(LOCAL_PATH)/configs/media/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml \
-    $(LOCAL_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
-    $(LOCAL_PATH)/configs/media/media_profiles_yupik_v0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_yupik_v0.xml \
-    $(LOCAL_PATH)/configs/media/media_profiles_yupik_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_yupik_v1.xml \
-    $(LOCAL_PATH)/configs/media/media_profiles_lahaina.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_lahaina.xml \
-    $(LOCAL_PATH)/configs/media/media_profiles_lahaina_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_lahaina_vendor.xml \
-    $(LOCAL_PATH)/configs/media/media_profiles_yupik_iot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_yupik_iot.xml
+# Media - Configuration
+PRODUCT_PACKAGES += \
+    media_codecs_lahaina_vendor.xml \
+    media_codecs_lahaina.xml \
+    media_codecs_performance_lahaina_vendor.xml \
+    media_codecs_performance_lahaina.xml \
+    media_codecs_performance_yupik_iot.xml \
+    media_codecs_performance_yupik_v0.xml \
+    media_codecs_performance_yupik_v1.xml \
+    media_codecs_yupik_iot.xml \
+    media_codecs_yupik_v0.xml \
+    media_codecs_yupik_v1.xml \
+    media_profiles_lahaina_vendor.xml \
+    media_profiles_lahaina.xml \
+    media_profiles_V1_0.xml \
+    media_profiles_vendor.xml \
+    media_profiles.xml \
+    media_profiles_yupik_iot.xml \
+    media_profiles_yupik_v0.xml \
+    media_profiles_yupik_v1.xml
 
 # NFC
 ifeq ($(TARGET_HAVE_SEC_NFC),true)
@@ -268,8 +271,8 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Partitions - Updater
 AB_OTA_UPDATER := false
 
-# Perf
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
+# Performance - Configuration
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/performance/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
 # Permissions
 PRODUCT_PACKAGES += \
@@ -321,7 +324,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += android.hardware.power-service.pixel-libperfmgr
 
 # Power - Configuration
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+PRODUCT_PACKAGES += powerhint.json
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -372,12 +375,13 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/wifi/icm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/icm.conf \
-    $(LOCAL_PATH)/configs/wifi/indoorchannel.info:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/indoorchannel.info \
-    $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
-    $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
+# WiFi - Configuration
+PRODUCT_PACKAGES += \
+    icm.conf \
+    indoorchannel.info \
+    p2p_supplicant_overlay.conf \
+    WCNSS_qcom_cfg.ini \
+    wpa_supplicant_overlay.conf
 
 # WiFi - Firmware Symlinks
 PRODUCT_PACKAGES += \
