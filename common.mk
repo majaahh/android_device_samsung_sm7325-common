@@ -183,7 +183,7 @@ PRODUCT_PACKAGES += \
     wifi_qcom_wcn6750.rc \
     wifi_sec.rc
 
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
 # Init - Scripts
 PRODUCT_PACKAGES += \
