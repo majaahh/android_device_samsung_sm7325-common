@@ -86,9 +86,6 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     android.hardware.bluetooth.audio-impl
 
-# CAS
-PRODUCT_PACKAGES += android.hardware.cas@1.2-service
-
 # Camera
 PRODUCT_PACKAGES += android.hardware.camera.provider-service.samsung
 
