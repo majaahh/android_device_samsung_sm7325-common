@@ -46,7 +46,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio@7.0-impl.samsung-sm7325 \
     android.hardware.audio.effect@7.0-impl \
-    android.hardware.soundtrigger@2.3-impl \
     audio.r_submix.default \
     audio.usb.default \
     libqcomvisualizer \
@@ -62,9 +61,7 @@ PRODUCT_PACKAGES += \
     audio_platform_info.xml \
     audio_platform_info_intcodec.xml \
     audio_policy_configuration.xml \
-    mixer_usb_default.xml \
-    sound_trigger_mixer_paths.xml \
-    sound_trigger_platform_info.xml
+    mixer_usb_default.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
@@ -77,6 +74,14 @@ PRODUCT_PACKAGES += SamsungDAP
 
 # Audio - FX
 TARGET_EXCLUDES_AUDIOFX := true
+
+# Audio - Sound Trigger
+PRODUCT_PACKAGES += android.hardware.soundtrigger@2.3-impl
+
+# Audio - Sound Trigger - Configuration
+PRODUCT_PACKAGES += \
+    sound_trigger_mixer_paths.xml \
+    sound_trigger_platform_info.xml
 
 # Audio - Sound Trigger - Permissions
 PRODUCT_PACKAGES += privapp-permissions-hotword.xml
