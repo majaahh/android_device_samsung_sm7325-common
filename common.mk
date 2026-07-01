@@ -190,6 +190,9 @@ PRODUCT_PACKAGES += \
     init.qti.qcv.sh \
     vendor_modprobe.sh
 
+# ION
+$(call soong_config_set_bool,libion,legacy_impl,true)
+
 # Keylayout
 PRODUCT_PACKAGES += sec_touchscreen.kl
 
