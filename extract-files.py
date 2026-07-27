@@ -33,7 +33,14 @@ lib_fixups: lib_fixups_user_type = {
 
 blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libsec-ril-impl.so': blob_fixup()
-        .binary_regex_replace(b'ril.dds.call.ongoing', b'vendor.calls.slot_id'),
+        .binary_regex_replace(b'ril.dds.call.ongoing', b'vendor.calls.slot_id')
+        # Always emit uiccApplicationsEnablementChanged
+        # Before: [b.lt 0x003e5cdc]
+        # After: [nop]
+        .sig_replace('1f 00 08 6b ab 01 00 54', '1f 00 08 6b 1f 20 03 d5')
+        # Before: [b.lt 0x003ee460]
+        # After: [nop]
+        .sig_replace('ff 02 08 6b ab 01 00 54', 'ff 02 08 6b 1f 20 03 d5'),
     ('vendor/lib64/hw/gatekeeper.mdfpp.so', 'vendor/lib64/libkeymaster_helper.so', 'vendor/lib64/libskeymaster4device.so'): blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
     ('vendor/lib/libdpps.so', 'vendor/lib64/libdpps.so', 'vendor/lib/libsnapdragoncolor-manager.so', 'vendor/lib64/libsnapdragoncolor-manager.so'): blob_fixup()
