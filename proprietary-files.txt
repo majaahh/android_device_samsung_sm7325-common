@@ -654,7 +654,6 @@ vendor/lib64/libsec-ril-impl.so;FIX_SONAME|1a945f1fc638da1e69d3c94d4559edbac4be5
 vendor/lib64/libsecril-client.so|a83d66a3827be522113ff64944288db72c559546
 vendor/lib64/libsemnativecarrierfeature.so|5b21435e0fd6f0be572e5bdc1f6c2dbe5ee00fb6
 vendor/lib64/libsystem_health_mon.so|347b862fc68a7c28d96c81151ca7b0d09f06bad9
-vendor/lib64/libvkmanager_vendor.so|a60e7ae6d26f51ad7ed198652371768806264cf9
 vendor/lib64/libxml.so|3784f1af188bffee31f386e56a8f14e26acea7f4
 vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so|bda592a1a8b77dcdfd492bbdff2b07e5aa45ad51
 vendor/lib64/vendor.samsung.hardware.radio.bridge@2.1.so|3abbd927525d2bcf95e3f2bec40393bfe1abe367
