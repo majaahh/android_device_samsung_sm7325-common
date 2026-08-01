@@ -48,20 +48,22 @@ PRODUCT_PACKAGES += \
 
 # Audio - Configuration
 PRODUCT_PACKAGES += \
+    aosp_audio_policy_volumes.xml \
+    aosp_default_volume_tables.xml \
+    aosp_r_submix_audio_policy_configuration.xml \
     audio_effects.xml \
     audio_io_policy.conf \
     audio_platform_info.xml \
     audio_platform_info_intcodec.xml \
     audio_policy_configuration.xml \
+    bluetooth_audio_policy_configuration_7_0.xml \
     mixer_usb_default.xml \
     sound_trigger_mixer_paths.xml \
     sound_trigger_platform_info.xml
 
-PRODUCT_COPY_FILES += \
-    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration_7_0.xml \
-    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
-    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
+$(call soong_config_set_bool,frameworks_av,use_aosp_audio_policy_volumes,true)
+$(call soong_config_set_bool,frameworks_av,use_aosp_default_volume_tables,true)
+$(call soong_config_set_bool,frameworks_av,use_aosp_r_submix_audio_policy_configuration,true)
 
 # Audio - Effects - Dolby
 PRODUCT_PACKAGES += SamsungDAP
