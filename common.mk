@@ -314,6 +314,7 @@ PRODUCT_PACKAGES += powerhint.json
 
 # RIL
 PRODUCT_PACKAGES += \
+    libsec-ril \
     secril_config_svc \
     sehradiomanager
 
