@@ -105,9 +105,7 @@ PRODUCT_PACKAGES += com.android.hardware.drm.clearkey
 PRODUCT_PACKAGES += android.hardware.biometrics.fingerprint-service.samsung
 
 # Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
+PRODUCT_PACKAGES += android.hardware.gatekeeper-service.samsung
 
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-samsung-ss
