@@ -90,6 +90,10 @@ vendor/lib/soundfx/libswspatializer.so
 # Audio - Effects - Dolby - Configuration
 vendor/etc/dolby/dax-default.xml
 
+# Audio - Effects - SoundBooster
+vendor/lib/lib_SoundBooster_ver1050.so
+vendor/lib64/lib_SoundBooster_ver1050.so
+
 # Audio - Sound Trigger
 vendor/lib/hw/sound_trigger.primary.lahaina.so
 vendor/lib/libaudio_soundtrigger.so

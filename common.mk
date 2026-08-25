@@ -71,6 +71,13 @@ PRODUCT_PACKAGES += SamsungDAP
 # Audio - Effects - FX
 TARGET_EXCLUDES_AUDIOFX := true
 
+# Audio - Effects - SoundBooster
+PRODUCT_PACKAGES += \
+    libsamsungSoundbooster_plus \
+    SoundBoosterStage
+
+$(call soong_config_set,samsungAudioVars,soundbooster_dsp_library,//vendor/samsung/sm7325-common:lib_SoundBooster_ver1050)
+
 # Audio - Sound Trigger - Permissions
 PRODUCT_PACKAGES += privapp-permissions-hotword.xml
 
