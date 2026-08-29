@@ -40,7 +40,14 @@ blob_fixups: blob_fixups_user_type = {
         .sig_replace('1f 00 08 6b ab 01 00 54', '1f 00 08 6b 1f 20 03 d5')
         # Before: [b.lt 0x003ee460]
         # After: [nop]
-        .sig_replace('ff 02 08 6b ab 01 00 54', 'ff 02 08 6b 1f 20 03 d5'),
+        .sig_replace('ff 02 08 6b ab 01 00 54', 'ff 02 08 6b 1f 20 03 d5')
+        # Skip legacy UICC code
+        # Before: [b.ge 0x0066e5bc]
+        # After: [b 0x0066e5bc]
+        .sig_replace('1f 00 08 6b aa 02 00 54', '1f 00 08 6b 15 00 00 14')
+        # Before: [b.gt 0x003ee664]
+        # After: [b 0x003ee664]
+        .sig_replace('1f 00 08 6b 0c 01 00 54', '1f 00 08 6b 08 00 00 14'),
     ('vendor/lib64/hw/gatekeeper.mdfpp.so', 'vendor/lib64/libkeymaster_helper.so', 'vendor/lib64/libskeymaster4device.so'): blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
     ('vendor/lib/libdpps.so', 'vendor/lib64/libdpps.so', 'vendor/lib/libsnapdragoncolor-manager.so', 'vendor/lib64/libsnapdragoncolor-manager.so'): blob_fixup()
