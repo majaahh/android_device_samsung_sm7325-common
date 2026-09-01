@@ -278,3 +278,6 @@ on property:sys.boot_completed=1
 
 on property:vendor.chre.enabled=0
    stop chre
+
+on charger
+    trigger firmware_mounts_complete
