@@ -311,6 +311,9 @@ PRODUCT_PACKAGES += \
     secril_config_svc \
     sehradiomanager
 
+# RIL - IMS
+$(call inherit-product hardware/lineage/generic-ims/ims.mk)
+
 # Sensors
 PRODUCT_PACKAGES += android.hardware.sensors-service.samsung-multihal
 
