@@ -187,7 +187,19 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/sm7325-common:libskeymaster4device)
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+PRODUCT_PACKAGES += \
+    ApertureOverlayCommon \
+    FlipFlapOverlayCommon \
+    FrameworkResOverlayCommon \
+    Launcher3QuickstepOverlayCommon \
+    LineagePartsOverlayCommon \
+    LineageSDKOverlayCommon \
+    LineageSettingsProviderOverlayCommon \
+    SettingsLibOverlayCommon \
+    SettingsOverlayCommon \
+    SystemUIOverlayCommon \
+    WiFiOverlayCommon
+
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Media - Configuration
@@ -339,8 +351,7 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     wpa_cli \
     wpa_supplicant \
-    wpa_supplicant.conf \
-    WiFiOverlayCommon
+    wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/icm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/icm.conf \
