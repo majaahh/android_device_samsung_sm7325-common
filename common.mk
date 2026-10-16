@@ -51,10 +51,6 @@ TARGET_EXCLUDES_AUDIOFX := true
 
 $(call soong_config_set,samsungAudioVars,soundbooster_dsp_library,//vendor/samsung/sm7325-common:lib_SoundBooster_ver1050)
 
-# CAS
-PRODUCT_PACKAGES += \
-    android.hardware.cas@1.2-service
-
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service.samsung
