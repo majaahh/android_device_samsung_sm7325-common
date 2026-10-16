@@ -220,7 +220,6 @@ PRODUCT_PACKAGES += \
     Launcher3QuickstepOverlayCommon \
     LineagePartsOverlayCommon \
     LineageSDKOverlayCommon \
-    LineageSettingsProviderOverlayCommon \
     SettingsOverlayCommon \
     SystemUIOverlayCommon \
     WiFiOverlayCommon
