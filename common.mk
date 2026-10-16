@@ -258,7 +258,6 @@ PRODUCT_PACKAGES += \
 endif
 
 # Partitions - Dynamic
-PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Partitions - Symlinks
