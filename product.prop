@@ -36,4 +36,3 @@ persist.bluetooth.bqr.min_interval_ms=0
 
 # eBPF
 ro.bpf.kver_override=5.10.239
-
