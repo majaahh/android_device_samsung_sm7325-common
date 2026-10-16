@@ -10,6 +10,13 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call soong_config_set,rfs,mpss_firmware_symlink_target,firmware_modem)
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
+# Inherit common makefiles
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+
+# Inherit some common Lineage stuff
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
 # Inherit proprietary blobs
 $(call inherit-product, vendor/samsung/sm7325-common/sm7325-common-vendor.mk)
 
