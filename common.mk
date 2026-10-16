@@ -195,7 +195,6 @@ PRODUCT_PACKAGES += \
     LineagePartsOverlayCommon \
     LineageSDKOverlayCommon \
     LineageSettingsProviderOverlayCommon \
-    SettingsLibOverlayCommon \
     SettingsOverlayCommon \
     SystemUIOverlayCommon \
     WiFiOverlayCommon
