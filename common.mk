@@ -52,6 +52,10 @@ $(call soong_config_set_bool,frameworks_av,use_aosp_default_volume_tables,true)
 $(call soong_config_set_bool,frameworks_av,use_aosp_r_submix_audio_policy_configuration,true)
 $(call soong_config_set,samsungAudioVars,soundbooster_dsp_library,//vendor/samsung/sm7325-common:lib_SoundBooster_ver1050)
 
+# Branding
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := samsung
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service.samsung
@@ -110,6 +114,9 @@ PRODUCT_PACKAGES += \
 # General
 PRODUCT_PACKAGES += \
     vndservicemanager
+
+# GMS
+PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
 # Health - Lineage
 PRODUCT_PACKAGES += \
@@ -201,6 +208,9 @@ PRODUCT_PACKAGES += \
     WiFiOverlayCommon
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
+
+# Media
+TARGET_SUPPORTS_OMX_SERVICE := false
 
 # Media - Configuration
 PRODUCT_PACKAGES += \

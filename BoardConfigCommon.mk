@@ -41,9 +41,13 @@ BOARD_SUPPORTS_SOUND_TRIGGER := true
 USE_CUSTOM_AUDIO_POLICY := 1
 
 # Kernel
+TARGET_KERNEL_CONFIG := vendor/lineage-$(TARGET_DEVICE)_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/sm7325
 
 # Kernel - Modules
+BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat device/samsung/$(TARGET_DEVICE)/configs/modules/modules.load.recovery))
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat device/samsung/$(TARGET_DEVICE)/configs/modules/modules.load))
+RECOVERY_KERNEL_MODULES := $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD)
 TARGET_MODULE_ALIASES += wlan.ko:qca_cld3_wlan.ko
 
 # Partitions
