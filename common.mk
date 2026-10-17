@@ -114,12 +114,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndservicemanager
 
-# Graphics
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-# A list of dpis to select prebuilt apk, in precedence order.
-PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
-
 # Health - Lineage
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
@@ -343,9 +337,6 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.samsung
 
 $(call soong_config_set_bool,samsungVibratorVars,duration_amplitude,true)
-
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 30
 
 # Wi-Fi
 PRODUCT_PACKAGES += \

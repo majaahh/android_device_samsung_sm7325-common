@@ -107,7 +107,6 @@ BOARD_KERNEL_CMDLINE += \
     video=vfb:640x400,bpp=32,memsize=3072000
 
 # Partitions - Recovery
-BOARD_HAS_DOWNLOAD_MODE := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_RECOVERY_MKBOOTIMG_ARGS += --header_version 2
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery/root/fstab.qcom
@@ -133,7 +132,6 @@ BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := lahaina
 TARGET_BOOTLOADER_BOARD_NAME := lahaina
-TARGET_NO_BOOTLOADER := true
 
 # Properties
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
@@ -144,9 +142,6 @@ TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 # Releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_samsung_sm7325
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
-
-# RIL
-ENABLE_VENDOR_RIL_SERVICE := true
 
 # SEPolicy
 include device/lineage/sepolicy/libion/sepolicy.mk
